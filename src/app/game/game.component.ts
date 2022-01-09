@@ -52,10 +52,10 @@ export class GameComponent implements OnInit {
 
       console.log('currentCard =', this.game.currentCard);
       console.log('Game is', this.game);
-      this.saveGame();
 
       this.game.currentPlayer++;
       this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
+      this.saveGame();
 
       setTimeout(() => {
         this.game.pickCardAnimation = false;
