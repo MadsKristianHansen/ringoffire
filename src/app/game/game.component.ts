@@ -12,7 +12,7 @@ import { EditPlayerComponent } from '../edit-player/edit-player.component';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  
+
   game!: Game;
   gameId!: string;
 
@@ -96,9 +96,11 @@ export class GameComponent implements OnInit {
 
     const dialogRef = this.dialog.open(EditPlayerComponent);
     dialogRef.afterClosed().subscribe((change: string) => {
-      console.log('Received change', change);
-      this.game.player_images[playerId] = change;
-      this.saveGame();
+      if (change) {
+        console.log('Received change', change);
+        this.game.player_images[playerId] = change;
+        this.saveGame();
+      }
     });
   }
 
