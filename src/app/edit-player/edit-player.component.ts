@@ -8,7 +8,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class EditPlayerComponent implements OnInit {
 
-  allProfilePictures = ['player.webp', '2.png', 'monkey.png', 'pinguin.svg'];
+  allProfilePictures = ['player.webp', '2.png', '3.png'];
 
   constructor(public dialogRef: MatDialogRef<EditPlayerComponent>) { }
 

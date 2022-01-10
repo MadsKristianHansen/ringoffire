@@ -26,3 +26,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         width: auto !important;
     }
 }
+
+.mat-dialog-container {
+    @media (max-width: 300px) {
+        padding: 17px !important;
+        overflow: hidden !important;
+    }
+}
+
+.mat-card-content {
+    text-align: center;
+}
+.mat-card-title {
+    text-align: center;
+}
+
+.mat-fab {
+    transition: all 225ms ease-in-out !important;
+    &:hover {
+        filter: brightness(1.5) !important;
+    }
+}
