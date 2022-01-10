@@ -187,3 +187,8 @@ app-player, app-player-mobile {
         width: 100%;
     }
 }
+
+.preloadImage {
+    opacity: 0;
+    z-index: -999;
+}

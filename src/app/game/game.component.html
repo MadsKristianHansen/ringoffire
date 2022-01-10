@@ -43,4 +43,6 @@ class="player-position hide-mobile"
 
 <app-game-info *ngIf="!gameOver" class="bottom-pin" [card]="game.currentCard"></app-game-info>
 
+<img class="preloadImage" src="../../assets/img/cards/{{ game.stack[game.stack.length -1] }}.png">
+
  
