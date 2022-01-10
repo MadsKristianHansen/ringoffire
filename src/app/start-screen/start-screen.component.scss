@@ -8,6 +8,10 @@
     align-items: center;
     overflow: hidden;
 
+    @media (max-width: 960px) {
+        overflow: hidden;
+    }
+
     img {
         height: 100vh;
     }
@@ -27,6 +31,10 @@
     font-family: 'Cinzel', serif;
     padding-top: 30px;
     padding-bottom: 23px;
+
+    @media (max-width: 550px) {
+        font-size: 13vw;
+    }
 }
 
 .start-label-box {
@@ -37,10 +45,26 @@
     display: flex;
     justify-content: center;
 
+    @media (max-width: 960px) {
+        bottom: 30vh;
+    }
+
+    @media (width: 1024px) and (height: 600px) {
+        bottom: 30vh;
+    }
+
     img {
         width: 40vh;
         height: auto;
         cursor: pointer;
+
+        @media (max-width: 960px) {
+            width: 400px;
+        }
+
+        @media (max-width: 450px) {
+            width: 90vw;
+        }
 
         &:hover {
             filter: brightness(1.25);

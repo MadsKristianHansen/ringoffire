@@ -3,5 +3,26 @@ body {
     font-family: 'Cinzel', serif;
 }
 
-html, body { height: 100%; }
+html, body { 
+    height: 100%;
+    overflow: hidden;
+ }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media (max-width: 985px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 985px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+.mat-form-field-infix {
+    @media (max-width: 290px) {
+        width: auto !important;
+    }
+}

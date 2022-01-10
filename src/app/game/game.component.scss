@@ -14,7 +14,16 @@
     img{
         position: absolute;
         width: 100px;
+
+        @media (max-width: 390px) {
+            width: 85px;
+        }
+
+        @media (width: 320px) and (height: 568px) {
+            width: 70px;
+        }
     }
+
 }
 
 .top-card {
@@ -29,28 +38,88 @@
 .played-card {
     transform: scale(1.3) translateX(140px) translateY(-150px) rotate(10deg) ;
     right: 20px;
+
+    @media (max-width: 390px) {
+        transform: scale(1.3) translateX(50px) translateY(-150px) rotate(10deg) ;
+    }
+
+    @media (width: 320px) and (height: 568px) {
+        transform: scale(1.3) translateX(50px) translateY(-130px) rotate(10deg) ;
+        top: -24px;
+    }
 }
 
 .pick-card {
     animation: pick-card-animation 1s ease-in-out;
     transform: scale(1.3) translateX(140px) translateY(-150px) rotate(10deg) ;
+
+    @media (max-width: 390px) {
+        transform: scale(1.3) translateX(50px) translateY(-150px) rotate(10deg) ;
+    }
+
+    @media (width: 320px) and (height: 568px) {
+        transform: scale(1.3) translateX(50px) translateY(-130px) rotate(10deg) ;
+    }
 }
 
-@keyframes pick-card-animation {
-    0% {
-        transform: scale(1) ;
+@media (width: 320px) and (height: 568px) {
+    @keyframes pick-card-animation {
+        0% {
+            transform: scale(1) ;
+        }
+        30% {
+            transform: scale(1.5) ;
+        }
+        50% {
+            transform: scale(1.5) ;
+        }
+        100% {
+            transform: scale(1.3) translateX(50px) translateY(-130px) rotate(10deg) ;
+        }
+        
     }
-    30% {
-        transform: scale(1.5) ;
-    }
-    50% {
-        transform: scale(1.5) ;
-    }
-    100% {
-        transform: scale(1.3) translateX(140px) translateY(-150px) rotate(10deg) ;
-    }
-    
+
 }
+
+@media (min-width: 390px) {
+    @keyframes pick-card-animation {
+        0% {
+            transform: scale(1) ;
+        }
+        30% {
+            transform: scale(1.5) ;
+        }
+        50% {
+            transform: scale(1.5) ;
+        }
+        100% {
+            transform: scale(1.3) translateX(140px) translateY(-150px) rotate(10deg) ;
+        }
+        
+    }
+
+}
+
+@media (max-width: 390px) {
+    @keyframes pick-card-animation {
+        0% {
+            transform: scale(1) ;
+        }
+        30% {
+            transform: scale(1.5) ;
+        }
+        50% {
+            transform: scale(1.5) ;
+        }
+        100% {
+            transform: scale(1.3) translateX(50px) translateY(-150px) rotate(10deg) ;
+        }
+        
+    }
+
+}
+
+
 
 .player-position {
     position: absolute;
@@ -62,6 +131,11 @@
     position: absolute;
     right: 32px;
     bottom: 32px;
+    z-index: 1;
+
+    @media (max-width: 720px) {
+        bottom: 160px;
+    }
 }
 
 .bottom-pin {
@@ -69,4 +143,28 @@
     left: 200px;
     right: 200px;
     bottom: 100px; 
+
+    @media (max-width: 720px) {
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+    
+    @media (width: 1024px) and (height: 600px) {
+        bottom: 30px;
+    }
+}
+
+.scroll-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    app-player-mobile {
+        margin-left: 8px;
+    }
 }
