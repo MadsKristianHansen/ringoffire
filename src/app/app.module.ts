@@ -20,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
 
 
 
@@ -31,7 +32,8 @@ import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
     PlayerComponent,
     DialogAddPlayerComponent,
     GameInfoComponent,
-    PlayerMobileComponent
+    PlayerMobileComponent,
+    EditPlayerComponent
   ],
   imports: [
     BrowserModule,

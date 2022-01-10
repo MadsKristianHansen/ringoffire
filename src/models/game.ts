@@ -7,6 +7,8 @@ export class Game {
     public currentCard: string = '';
     public pickCardAnimation = false;
 
+    public player_images: string[] = [];
+
     constructor() {
         for (let i = 1; i < 14; i++) {
             this.stack.push('spade_' + i);
@@ -25,7 +27,8 @@ export class Game {
             playedCards: this.playedCards,
             currentPlayer: this.currentPlayer,
             currentCard: this.currentCard,
-            pickCardAnimation: this.pickCardAnimation
+            pickCardAnimation: this.pickCardAnimation,
+            player_images: this.player_images
         };
     }
 

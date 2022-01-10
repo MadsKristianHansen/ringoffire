@@ -9,6 +9,7 @@ export class PlayerComponent implements OnInit {
 
   @Input() name: any;
   @Input() playerActive: boolean = false;
+  @Input() profileImage = 'player.webp';
 
   constructor() { }
 
