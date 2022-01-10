@@ -98,7 +98,12 @@ export class GameComponent implements OnInit {
     dialogRef.afterClosed().subscribe((change: string) => {
       if (change) {
         console.log('Received change', change);
-        this.game.player_images[playerId] = change;
+        if (change == 'DELETE') {
+          this.game.players.splice(playerId, 1);
+          this.game.player_images.splice(playerId, 1);
+        } else {
+          this.game.player_images[playerId] = change;
+        }
         this.saveGame();
       }
     });
