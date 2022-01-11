@@ -13,14 +13,28 @@
 
     img{
         position: absolute;
-        width: 100px;
+        width: 10rem;
 
-        @media (max-width: 390px) {
-            width: 85px;
+        @media (max-width: 450px) {
+            width: 6rem;
         }
 
+
         @media (width: 320px) and (height: 568px) {
-            width: 70px;
+            width: 6rem;
+            top: -4rem;
+        }
+
+        @media (width: 1024px) and (height: 600px) {
+            width: 6rem;
+        }
+
+        @media (width: 1280px) and (height: 800px) {
+            width: 7rem;
+        }
+
+        @media (width: 540px) and (height: 720px) {
+            width: 7rem;
         }
     }
 
@@ -36,30 +50,75 @@
 }
 
 .played-card {
-    transform: scale(1.3) translateX(140px) translateY(-150px) rotate(10deg) ;
+    transform: translateX(13rem) translateY(-13rem) rotate(-15deg) ;
     right: 20px;
 
-    @media (max-width: 390px) {
-        transform: scale(1.3) translateX(50px) translateY(-150px) rotate(10deg) ;
+    @media (max-width: 450px) {
+        transform:  translateX(9rem) translateY(-13rem) rotate(-15deg) ;
     }
 
     @media (width: 320px) and (height: 568px) {
-        transform: scale(1.3) translateX(50px) translateY(-130px) rotate(10deg) ;
-        top: -24px;
+        transform:  translateX(9rem) translateY(-8rem) rotate(-15deg) ;
     }
+   
+
+    
 }
 
 .pick-card {
     animation: pick-card-animation 1s ease-in-out;
-    transform: scale(1.3) translateX(140px) translateY(-150px) rotate(10deg) ;
+    transform: translateX(13rem) translateY(-13rem) rotate(-15deg) ;
 
-    @media (max-width: 390px) {
-        transform: scale(1.3) translateX(50px) translateY(-150px) rotate(10deg) ;
+    @media (max-width: 450px) {
+        transform:  translateX(9rem) translateY(-13rem) rotate(-15deg) ;
     }
 
     @media (width: 320px) and (height: 568px) {
-        transform: scale(1.3) translateX(50px) translateY(-130px) rotate(10deg) ;
+        transform:  translateX(9rem) translateY(-8rem) rotate(-15deg) ;
     }
+    
+
+    
+}
+
+
+
+@media (min-width: 450px) {
+    @keyframes pick-card-animation {
+        0% {
+            transform: scale(1) ;
+        }
+        30% {
+            transform: scale(1.5) ;
+        }
+        50% {
+            transform: scale(1.5) ;
+        }
+        100% {
+            transform: translateX(13rem) translateY(-13rem) rotate(-15deg) ;
+        }
+        
+    }
+
+}
+
+@media (max-width: 450px) {
+    @keyframes pick-card-animation {
+        0% {
+            transform: scale(1) ;
+        }
+        30% {
+            transform: scale(1.5) ;
+        }
+        50% {
+            transform: scale(1.5) ;
+        }
+        100% {
+            transform: translateX(9rem) translateY(-13rem) rotate(-15deg) ;
+        }
+        
+    }
+
 }
 
 @media (width: 320px) and (height: 568px) {
@@ -74,45 +133,7 @@
             transform: scale(1.5) ;
         }
         100% {
-            transform: scale(1.3) translateX(50px) translateY(-130px) rotate(10deg) ;
-        }
-        
-    }
-
-}
-
-@media (min-width: 390px) {
-    @keyframes pick-card-animation {
-        0% {
-            transform: scale(1) ;
-        }
-        30% {
-            transform: scale(1.5) ;
-        }
-        50% {
-            transform: scale(1.5) ;
-        }
-        100% {
-            transform: scale(1.3) translateX(140px) translateY(-150px) rotate(10deg) ;
-        }
-        
-    }
-
-}
-
-@media (max-width: 390px) {
-    @keyframes pick-card-animation {
-        0% {
-            transform: scale(1) ;
-        }
-        30% {
-            transform: scale(1.5) ;
-        }
-        50% {
-            transform: scale(1.5) ;
-        }
-        100% {
-            transform: scale(1.3) translateX(50px) translateY(-150px) rotate(10deg) ;
+            transform: translateX(9rem) translateY(-8rem) rotate(-15deg) ;
         }
         
     }
@@ -142,7 +163,11 @@
     position: absolute;
     left: 200px;
     right: 200px;
-    bottom: 100px; 
+    bottom: 50px; 
+
+    @media (max-width: 990px) {
+        bottom: 15px;
+    }
 
     @media (max-width: 720px) {
         left: 0px;
@@ -151,7 +176,7 @@
     }
     
     @media (width: 1024px) and (height: 600px) {
-        bottom: 30px;
+        bottom: 20px;
     }
 }
 
